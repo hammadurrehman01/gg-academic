@@ -531,17 +531,18 @@ export default function Order({ coupon }: any) {
   // useEffect(() => {
   //   fetchCity();
   // }, []);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPosition(window.scrollY);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   const handleFileChange = (event: any) => {
     const selectedFiles = event.target.files;
     const maxSize = 50 * 1024 * 1024; // 50 MB in bytes
@@ -658,28 +659,29 @@ export default function Order({ coupon }: any) {
   const [isVisible, setIsVisible] = useState(false);
   const targetRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // Check if the target element is in the viewport
-          setIsVisible(entry.isIntersecting);
-        });
-      },
-      { threshold: 0.5 } // Adjust the threshold as needed
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         // Check if the target element is in the viewport
+  //         setIsVisible(entry.isIntersecting);
+  //       });
+  //     },
+  //     { threshold: 0.5 } // Adjust the threshold as needed
+  //   );
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
+  //   if (targetRef.current) {
+  //     observer.observe(targetRef.current);
+  //   }
 
-    // Clean up the observer when the component unmounts
-    return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-      }
-    };
-  }, []);
+  //   // Clean up the observer when the component unmounts
+  //   return () => {
+  //     if (targetRef.current) {
+  //       observer.unobserve(targetRef.current);
+  //     }
+  //   };
+  // }, []);
+
   const formattedHours = hours < 10 ? "0" + hours : hours;
   const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
 
@@ -859,35 +861,33 @@ export default function Order({ coupon }: any) {
   return (
     <>
       {iscoupon ? (
-        <>
-          <div
-            className=" min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center"
-            id="modal-id"
-          >
-            <div className="absolute bg-black opacity-80 inset-0 z-0"></div>
-            <div className="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-[url('https://gogrades.org/web-assets/confetti.jpg')] bg-contain">
-              <div className="">
-                <div className="text-center p-5 flex-auto justify-center">
-                  <img src="/CouponPopup.png" className="h-16 mx-auto" />
-                  <h2 className="text-xl font-bold py-4 ">
-                    50% OFF Discount Applied
-                  </h2>
-                  <p className="text-sm text-gray-500 px-8">
-                    Your coupon has been applied successfully
-                  </p>
-                </div>
-                <div className="p-3  mt-2 text-center space-x-4 md:block">
-                  <button
-                    onClick={() => setIscoupon(false)}
-                    className="mb-2  md:mb-0 bg-[#0F203D] border border-[#0F203D] px-7 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-lg hover:shadow-lg hover:bg-[#0F203D]/80"
-                  >
-                    Ok
-                  </button>
-                </div>
+        <div
+          className=" min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center"
+          id="modal-id"
+        >
+          <div className="absolute bg-black opacity-80 inset-0 z-0"></div>
+          <div className="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  orderpopup bg-contain">
+            <div className="">
+              <div className="text-center p-5 flex-auto justify-center">
+                <img src="/CouponPopup.png" className="h-16 mx-auto" />
+                <h2 className="text-xl font-bold py-4 ">
+                  50% OFF Discount Applied
+                </h2>
+                <p className="text-sm text-gray-500 px-8">
+                  Your coupon has been applied successfully
+                </p>
+              </div>
+              <div className="p-3  mt-2 text-center space-x-4 md:block">
+                <button
+                  onClick={() => setIscoupon(false)}
+                  className="mb-2  md:mb-0 bg-[#0F203D] border border-[#0F203D] px-7 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-lg hover:shadow-lg hover:bg-[#0F203D]/80"
+                >
+                  Ok
+                </button>
               </div>
             </div>
           </div>
-        </>
+        </div>
       ) : (
         ""
       )}

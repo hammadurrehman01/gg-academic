@@ -337,6 +337,7 @@ export default function WhyGoGradesTest(props: any) {
               onClick={() => {
                 setModal(true);
                 setLoader(true);
+                localStorage.setItem("externalModal", "true");
               }}
               className="capitalize cursor-pointer py-[6px] px-[20px] rounded-md text-white font-semibold text-[22px] shadow-red-500 bg-red-500 hover:drop-shadow-xl hover:shadow-xl transition-all duration-100 w-[70%] md:w-1/2 text-center"
             >

@@ -1,10 +1,16 @@
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import React from "react";
+"use client";
+
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 import Code from "./Code";
 
 export default function page() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.log("scrollposition", window.scrollY);
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <title>Contact us | GoGrades</title>

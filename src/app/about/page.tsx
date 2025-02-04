@@ -1,12 +1,17 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import About2 from "@/components/about/About2";
-import Banner from "@/components/about/Banner";
-import Steps from "@/components/about/Steps";
-import React, { useEffect, useState } from "react";
+"use client"
+
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 import HomeAbout from "./HomeAbout";
 
 export default function page() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.log("scrollposition", window.scrollY)
+    window.scrollTo(0, 0)
+
+  }, [pathname]); 
   return (
     <div className="">
       <title>About us | Gogrades.org</title>

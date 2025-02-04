@@ -36,6 +36,7 @@ const MobileModal = (props: any) => {
     setModal(false);
     localStorage.setItem("modal", "true");
     localStorage.setItem("modalTimestamp", new Date().getTime().toString());
+    localStorage.setItem("externalModal", "false");
   };
 
   const handleInputChange = (event: any) => {

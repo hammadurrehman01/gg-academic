@@ -230,14 +230,17 @@ export default function TrustedPartnerTest(props: any) {
         <span className="text-[#FFE066]"> Academic Excellence</span>
       </h3>
       <p className="text-white text-center max-w-3xl mx-auto mt-1">
-        We ensure premium {title} tailored to meet your academic needs.
-        Let our experienced team support you in achieving top-notch results at
+        We ensure premium {title} tailored to meet your academic needs. Let our
+        experienced team support you in achieving top-notch results at
         competitive prices.
       </p>
       <div className="flex justify-center gap-3 flex-wrap mt-3">
         <button
           className="text-white border border-white py-[7px] px-[24px] text-[20px] rounded-[4px] font-medium"
-          onClick={() => setModal(true)}
+          onClick={() => {
+            setModal(true);
+            localStorage.setItem("externalModal", "true");
+          }}
           style={{
             background:
               "transparent linear-gradient(91deg,#f9413e 0%,#f7514e 100%) 0 0 no-repeat",

@@ -1,18 +1,15 @@
 "use client";
-import "./globals.css";
-import { NextRequest } from "next/server";
-import { useEffect, useState } from "react";
-import FabButton from "@/components/ChatIcons";
 import BannerContextProvider from "@/components/BannerContext";
-import Script from "next/script";
-import { useRouter } from "next/navigation";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { IoIosKey } from "react-icons/io";
+import FabButton from "@/components/ChatIcons";
 import CookiesPopup from "@/components/CookiesPopup";
 import CookiesPopupMobile from "@/components/CookiesPopupMobile";
 import Image from "next/image";
-import ScrollToTop from "./ScrollToTop";
+import { usePathname } from "next/navigation";
+import Script from "next/script";
+import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./globals.css";
 
 export default function RootLayout({ children }: { children: any }) {
   const [number, setNumber] = useState("+447593709971");
@@ -28,6 +25,10 @@ export default function RootLayout({ children }: { children: any }) {
         setCookiePopup(true);
       }
     }, 1000);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("externalModal", "false");
   }, []);
 
   return (
@@ -213,7 +214,7 @@ export default function RootLayout({ children }: { children: any }) {
           {children}
 
           {/* <Footer number={number} /> */}
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </BannerContextProvider>
       </body>
     </html>

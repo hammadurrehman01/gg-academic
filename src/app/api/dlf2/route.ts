@@ -99,7 +99,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: url(https://gogrades.org/web-assets/confetti.jpg);
+      background: url(https://gogrades.org/web-assets/order-img.webp);
       background-size: cover; /* Adjusts the image to cover the entire background */
       height: 100%;
       width: 100%;

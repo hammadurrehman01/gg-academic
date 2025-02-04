@@ -205,8 +205,9 @@ export default function WhatsappTest(props: any) {
         <button
           className="text-white border border-white py-[7px] px-[24px] text-[20px] rounded-[4px] font-medium"
           onClick={() => {
-            setModal(true)
-            setLoader(true)
+            setModal(true);
+            setLoader(true);
+            localStorage.setItem("externalModal", "true");
           }}
           style={{
             background:
@@ -226,7 +227,9 @@ export default function WhatsappTest(props: any) {
         </Link>
       </div>
       {modal && <Modal setModal={setModal} locationDetails={locationDetails} />}
-      {modal && <MobileModal setModal={setModal} locationDetails={locationDetails} />}
+      {modal && (
+        <MobileModal setModal={setModal} locationDetails={locationDetails} />
+      )}
     </div>
   );
 }

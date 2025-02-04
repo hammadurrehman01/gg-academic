@@ -239,7 +239,6 @@ body {
 .swiper-wrapper {
   padding: 0px !important;
 }
-
 .thrdsecov {
   background-image: url(/why-gg/banner.webp);
   background-blend-mode: overlay;
@@ -247,6 +246,10 @@ body {
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.orderpopup {
+  background-image: url(https://gogrades.org/web-assets/order-img.webp);
 }
 
 .leftoverly {
@@ -259,13 +262,13 @@ body {
 
 .highlg-txe {
   font-size: 15px;
-    background: #1c3d72;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-transform: capitalize;
-    color: white;
-    font-weight: 500;
-    margin: 0px !important;
-    border-radius: 7px;
-    margin: 5px 35px 0px 35px !important;
+  background: #1c3d72;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+  margin: 0px !important;
+  border-radius: 7px;
+  margin: 5px 35px 0px 35px !important;
 }

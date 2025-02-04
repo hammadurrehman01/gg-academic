@@ -81,7 +81,6 @@ export default function HomeAbout() {
       const eightHours = 8 * 60 * 60 * 1000;
 
       if (elapsedTime >= eightHours) {
-  
         localStorage.setItem("modal", "false");
       }
     }

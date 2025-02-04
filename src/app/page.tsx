@@ -28,6 +28,7 @@ export default function Home() {
   useEffect(() => {
     const modalData = localStorage.getItem("modal");
     const storedTime = localStorage.getItem("modalTimestamp");
+    const externalModal = localStorage.getItem("externalModal");
 
     if (modalData === "true" && storedTime) {
       const currentTime = new Date().getTime();
@@ -40,7 +41,7 @@ export default function Home() {
     }
 
     // If modalData is "false" (or missing after 8 hours), show modal
-    if (!modalData || modalData === "false") {
+    if ((!modalData || modalData === "false") && externalModal && externalModal === "false") {
       const timer = setTimeout(() => {
         setModal(true);
       }, 7000);
