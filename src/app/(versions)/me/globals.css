@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+.free {
+  font-family: "Satisfy", cursive;
+}
+
+.fontchange {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.bgCustom {
+  background: linear-gradient(30deg, #282828 53%, #1c3e61 35%);
+}
+
+.bgCustom:hover {
+  background: linear-gradient(30deg, #1c3e61 53%, #1c3e61 35%) !important;
+}
+
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  height: 100%;
+  padding-bottom: 2rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  max-width: 650px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidetext {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#style-4::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #e4d8d8;
+}
+
+#style-4::-webkit-scrollbar {
+  width: 10px;
+  background-color: #e4d8d8;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+  border: 2px solid #555555;
+  border-radius: 2px;
+}
+
+#phone {
+  height: 38px;
+  width: 100%;
+  border: 1px;
+  border: 1px solid rgb(206 212 218);
+}
+
+.iti__flag-container {
+  border-right: 1px solid !important ;
+  border-color: #000 !important;
+}
+
+.swiper-wrapper {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.iti--allow-dropdown {
+  width: 100%;
+}
+
+.myContainer {
+  @apply max-w-[85rem] lg:px-[50px]  md:px-[35px] sm:px-[20px] px-[12px];
+  margin: auto;
+}
+
+.animate {
+  animation: fadeInAnimation ease-out;
+  animation-duration: 900ms;
+  animation-iteration-count: 1;
+  /* animation-play-state: running; */
+}
+
+.scale {
+  animation: scale ease-in-out 2200ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    background-color: #000;
+  }
+
+  100% {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.textanimate {
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  transition: 2000ms;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 710px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.anim {
+  animation: pulse 1s infinite;
+}

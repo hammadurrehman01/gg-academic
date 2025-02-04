@@ -1,0 +1,622 @@
+"use client";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { FaCheck } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+
+import CountryCode from "@/components/CountryCode";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Head from "next/head";
+
+export default function ContentV2() {
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("...");
+  const [number, setNumber] = useState("");
+
+  const fetchCity = async () => {
+    let cityy = localStorage.getItem("city");
+    let countryy = localStorage.getItem("country");
+    if (cityy !== null) {
+      setCity(cityy as any);
+    }
+    if (countryy !== null) {
+      setCountry(countryy as any);
+    }
+
+    const ipUrl = "https://api.ipify.org?format=json";
+
+    try {
+      // Fetch the user's IP address
+      const response = await fetch(ipUrl);
+      const data = await response.json(); // Assuming the response is in JSON
+      const userIp = data.ip;
+
+      // Fetch location data based on the IP address
+      const locationResponse = await fetch(
+        `https://pro.ip-api.com/json/${userIp}?key=tRuJ0KuCug4wEHs&fields=status,message,continent,continentCode,country,countryCode,countryCode3,region,regionName,city,district,zip,lat,lon,timezone,offset,currentTime,currency,callingCode,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
+      );
+      const locationData = await locationResponse.json();
+
+      let fetchedCity = locationData.country || "London"; // Set default value
+      let fetchedCountry = locationData.countryCode || "GB"; // Set default value
+      //
+      // Store the city and country in local storage
+      localStorage.setItem("city", fetchedCity);
+      localStorage.setItem("country", fetchedCountry);
+
+      // Assuming you have functions like setCity and setCountry to update your UI
+      setCity(fetchedCity);
+      setCountry(fetchedCountry);
+    } catch (error) {
+      // If the API request fails, set default values
+    }
+  };
+
+  useEffect(() => {
+    const dynamicNumber: any = {
+      US: "+19179331132",
+      MX: "+19179331132",
+      CA: "+19179331132",
+      AU: "+61480004010",
+      NZ: "+61480004010",
+      UK: "+447593709971",
+    };
+
+    if (dynamicNumber[country]) {
+      setNumber(dynamicNumber[country]);
+    } else {
+      setNumber("+447593709971");
+    }
+  }, [country]);
+
+  useEffect(() => {
+    fetchCity();
+  }, []);
+
+  const [modal, setModal] = useState(false);
+  const modalChange = (modal: any) => {
+    setModal(false);
+  };
+  return (
+    <>
+      <Navbar number={number} />
+      <Head>
+        <title>Privacy Policy | Gogrades.org</title>
+        <meta
+          name="description"
+          content="Get online assessment editing services and help for the students of UK and Australia. We have qualified and experienced academic writers for all subjects."
+          key="desc"
+        />
+        <link
+          rel="canonical"
+          href={`https://gogrades.org/privacy-policy`}
+        ></link>
+       
+      </Head>
+      <div className="bg-[url('/samplebanner.jpg')] py-[40px] max-md:pt-[70px]  bg-right bg-cover bg-blend-overlay bg-[#000]/50">
+        <h1 className="text-[#fff] text-[26px] sm:text-[38px] text-center font-semibold">
+          Privacy Policy
+        </h1>
+        <div className="flex justify-center gap-5 mt-8  flex-wrap mx-3">
+          <button
+            onClick={() => setModal(true)}
+            className={`text-white  rounded-md text-[16px] md:text-[19px] font-medium hidetext py-2 px-4 `}
+            style={{
+              background:
+                "transparent linear-gradient(91deg, #f9413e 0%, #f7514e 100%) 0% 0% no-repeat",
+            }}
+          >
+            Get Free Price Quote
+          </button>
+          <Link
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+          >
+            <button className="bg-white py-1 px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2">
+              <IoLogoWhatsapp className="text-[22px] text-green-600" />
+              <span className="text-left text-[12px] leading-tight text-[#2A2A2A]">
+                Order on Whatsapp <br />
+                <span className="text-[20px] mt-[-10px] text-black">
+                  Live Chat Now
+                </span>
+              </span>
+            </button>{" "}
+          </Link>
+        </div>
+      </div>
+      <div className="border-b">
+        <div className="w-full myContainer py-3 mx-auto max-md:px-4">
+          <Link href="/">Home</Link> {`> Privacy Policy`}
+        </div>
+      </div>
+      <div className="flex justify-between myContainer py-6 mx-auto md:gap-20 flex-col md:flex-row mb-10 max-md:px-4 mt-14 relative">
+        <div className=" font-medium">
+          <h2 className="border-l-8 pl-3  border-[#f7514e] text-[24px] leading-[24px] text-[#2a2a2a] text-left font-semibold my-6 ">
+            INTRODUCTION
+          </h2>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            We always give priority to maintaining the privacy of our customers
+            and care about the data and information that they share with us.
+            This notice is for the visitors who seek service from the website
+            www.gogrades.org, its sub-domains, and its mobile application. For
+            the purpose of explaining our privacy details, &apos;we,&apos;
+            &apos;our,&apos; and &apos;us&apos; will be referred to as
+            Gogrades.org, which operates this platform, and &apos;you&apos; will
+            imply the user of our academic writing service throughout the
+            policy.
+            <br />
+            Whether you are a regular client or new to our service, we recommend
+            you to read the terms of our policy carefully and understand how we
+            employ and use your information. We have tried to use simple,
+            concise, and familiar language, but in case you find something
+            difficult to comprehend or have questions regarding our privacy
+            policy, feel free to contact us at the details mentioned at the end.
+            <br />
+            Anyone who visits our website is advised to accept the terms and
+            conditions of our policy before hiring us for writing their academic
+            documents. Rest assured that we will not use your information for
+            any other purpose than described herein without your consent.
+          </p>
+
+          <h2 className="text-[18px] leading-[24px] text-[#2a2a2a] text-left font-semibold my-6 ">
+            Table of Contents
+          </h2>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            What type of data do we ask from our clients?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Why we need the information?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Do we have a legal basis to collect your information?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            How long do we retain your personal details?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            How secure is your data with us?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            What are your rights regarding your data?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            What about cookies and other tracking technologies?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            How do we maintain transparency and accountability?
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            How to contact us?
+          </p>
+          <h3 className="text-[20px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            What type of data do we ask from our clients?
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            Whenever you visit our site, we receive both Personally Identifiable
+            Information (PII) and Non-Personally Identifiable Information
+            (Non-PII).
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            Personally Identifiable Information
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            This information can potentially trace or distinguish an individual
+            {`'`}s identity. The data that is considered PII includes...
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Name
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Address
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Phone Number
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Email Address
+          </p>
+          <p className="flex justify-start  text-[15px] leading-[24px] text-[#2A2A2A] my-2">
+            <FaCheck className="text-[#33e533] text-[12px] mr-1  h-[15px] w-[15px] " />
+            Country
+          </p>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            We would like to clarify that all the payment-related information is
+            not stored with us as transactions are done through secure payment
+            gateway. In case you opt for PayPal as your payment mode, all your
+            card details are provided directly to PayPal. So their privacy
+            policy will be applicable on the information that you have given.
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            Non-Personally Identifiable Information
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            It is anonymous data that is collected by servers using cookies and
+            browsers. It incorporates information that is enough to correspond
+            to a particular individual, profile, or account but not sufficient
+            to locate or identify whom that information belongs to. It includes
+            your IP address, time zone, plugin details, the time you spent on
+            site, screen size, web browser&apos;s information, and the total
+            number of web pages you hit.
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            What are the legal bases to process your information?
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            We assure you that none of the information provided by you will be
+            processed or used without taking your consent. We abide by the
+            Article 6, Recital 40 of the GDPR, which clearly states that
+            personal detail can be lawfully processed only after the consent of
+            the user or on the basis of other legal bases, such as legal
+            obligation, legitimate interest. Also, the reason for your consent
+            will not be clubbed with any of our private motives. So, if you have
+            agreed to share your details for a specific purpose, then we
+            won&apos;t use it for marketing activities.
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            How long do we retain your personal details?
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            We hold your information until the purpose of originally collecting
+            it is accomplished, which includes gathering feedback, providing
+            writing services, or complying with any legal obligations.
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            How secure is your data with us?
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            We protect your information with Secured Socket Layer (SSL)
+            software, using which we encrypt the data. We utilize firewall
+            protection to safeguard your network from malicious software.
+            However, we cannot ensure the security of information when you
+            transmit it online. We implement appropriate security to defend
+            against misuse, alteration, or loss of the information we received
+            from you.
+            <br />
+            Moreover, we restrict access to your personal information only to
+            our employees, as they need it to process your order. They are
+            subject to the obligation of strict confidentiality and can be
+            terminated if they fail to comply with this agreement.
+            <br />
+            In case of any security breach, rest assured that we will notify you
+            as soon as possible and provide all the necessary information to
+            take further protection measures via the email address or phone
+            number you have provided to us.
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            What are your rights regarding your data?
+          </h3>
+          <ul className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            <li>
+              The right to be informed (Article 14): You have the right to know
+              what type of data is being collected, how it will be used, how
+              long it will be kept, and whether it will be shared with any third
+              party or not.
+            </li>
+            <br />
+            <li>
+              The right to access (Article 15): Users can access information
+              that is stored with us, and we are obliged to provide you with a
+              copy of any personal data concerning you.
+            </li>
+            <br />
+
+            <li>
+              The right to rectification (Article 16): If you ever discover that
+              the information we hold about you is inaccurate or incomplete,
+              then you can request it to be updated.
+            </li>
+            <br />
+
+            <li>
+              The right to erasure (Article 17): Or &quot;The Right to be
+              Forgotten,&quot; allows users to request us to erase their data in
+              specific circumstances.
+            </li>
+            <br />
+
+            <li>
+              The right to restrict processing (Article 18): It enables you to
+              restrict the way we use your personal data.
+            </li>
+            <br />
+
+            <li>
+              The right to data portability (Article 19): You can obtain and
+              reuse your personal information for your own purposes across
+              different services.
+            </li>
+            <br />
+
+            <li>
+              The right to object (Article 21): You are free to object to the
+              processing of your personal data.
+            </li>
+            <br />
+
+            <li>
+              The right to lodge a complaint (Article 77): You can lodge a
+              complaint with the supervisory authority of your land.
+            </li>
+            <br />
+
+            <li>
+              The right to withdraw consent (Article 7): You can withdraw
+              consent at any time, and we will stop using your data further.
+            </li>
+            <br />
+          </ul>
+
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            Opt-Out Instructions
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            You have the right to opt out of certain uses and disclosures of
+            your personal information. Below are the methods to exercise your
+            opt-out rights:
+          </p>
+          <ul className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            <li>
+              Email Marketing: If you no longer wish to receive marketing emails
+              from us, you can opt out by clicking the “unsubscribe” link at the
+              bottom of any marketing email you receive from us. Alternatively,
+              contact us at support@gogrades.org to request removal from our
+              mailing list.
+            </li>
+            <br />
+            <li>
+              Cookies and Tracking Technologies: Manage your cookie preferences
+              through our Cookie Consent Tool available on our website. You can
+              also set your browser to refuse cookies or alert you when cookies
+              are being sent. Please note that disabling cookies may affect
+              website functionality.
+            </li>
+            <br />
+            <li>
+              Data Sharing (if applicable): If you wish to opt out of the
+              sharing of your data with third parties, please contact us
+              directly at support@gogrades.org with your request.
+            </li>
+            <br />
+          </ul>
+
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            What about cookies and other tracking technologies?
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            Cookies are small text files sent to your device by our server when
+            you visit our site. They allow our server to recognize your browser
+            for improved services and secure login. Cookies will work only after
+            your consent is provided through a pop-up dialogue box.
+          </p>
+          <h3 className="text-[18px] text-[#2a2a2a] uppercase mt-5 mb-3">
+            How to contact us?
+          </h3>
+          <p className="text-[15px] leading-[24px] text-[#2A2A2A]">
+            For further queries, grievances, or issues regarding our Privacy
+            Policy, you can get in touch with us by sending an email to &nbsp;
+            <a href="mailto:support@gogrades.org" className="text-blue-600">
+              support@gogrades.org
+            </a>
+          </p>
+        </div>
+        <div
+          className="shadow-lg mt-10 md:min-w-[355px] h-fit top-32 sticky"
+          style={{ boxShadow: "0 0 8px rgba(0, 0, 0, 0.23)" }}
+        >
+          <h5 className="text-[#246ED0] bg-[#EDF4F9] text-center w-full py-3 font-semibold text-[22px] ">
+            FREE Features
+          </h5>
+          <ul className="px-3 py-2 border-b">
+            <li className="flex justify-between items-center mt-2">
+              <p className="text-[15px] text-[#2A2A2A] font-medium">
+                Topic Creation
+              </p>
+              <p className="text-[16px] text-[#33CC6F] font-medium">
+                <span
+                  className="text-black text-[14px]"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  £ 11
+                </span>
+                &nbsp; FREE
+              </p>
+            </li>
+            <li className="flex justify-between items-center mt-2">
+              <p className="text-[15px] text-[#2A2A2A] font-medium">Outline</p>
+              <p className="text-[16px] text-[#33CC6F] font-medium">
+                <span
+                  className="text-black text-[14px]"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  £ 14
+                </span>
+                &nbsp; FREE
+              </p>
+            </li>
+            <li className="flex justify-between items-center mt-2">
+              <p className="text-[15px] text-[#2A2A2A] font-medium">
+                Unlimited Revisions
+              </p>
+              <p className="text-[16px] text-[#33CC6F] font-medium">
+                <span
+                  className="text-black text-[14px]"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  £ 31
+                </span>
+                &nbsp; FREE
+              </p>
+            </li>
+            <li className="flex justify-between items-center mt-2">
+              <p className="text-[15px] text-[#2A2A2A] font-medium">
+                Editing/Proofreading
+              </p>
+              <p className="text-[16px] text-[#33CC6F] font-medium">
+                <span
+                  className="text-black text-[14px]"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  £ 42
+                </span>
+                &nbsp; FREE
+              </p>
+            </li>
+            <li className="flex justify-between items-center mt-2">
+              <p className="text-[15px] text-[#2A2A2A] font-medium">
+                Formatting
+              </p>
+              <p className="text-[16px] text-[#33CC6F] font-medium">
+                <span
+                  className="text-black text-[14px]"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  £ 12
+                </span>
+                &nbsp; FREE
+              </p>
+            </li>
+            <li className="flex justify-between items-center mt-2">
+              <p className="text-[15px] text-[#2A2A2A] font-medium">
+                Bibliography
+              </p>
+              <p className="text-[16px] text-[#33CC6F] font-medium">
+                <span
+                  className="text-black text-[14px]"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  £ 11
+                </span>
+                &nbsp; FREE
+              </p>
+            </li>
+          </ul>
+          <div className="flex flex-col justify-center items-center my-3 px-3">
+            <h6 className="text-[15px] text-[#3E4657] leading-[18px] font-medium">
+              Get all these features for
+            </h6>
+            <p className="text-[30px] text-[#33CC6F] font-semibold">
+              <span
+                className="text-black text-[20px]"
+                style={{ textDecoration: "line-through" }}
+              >
+                £ 121
+              </span>
+              &nbsp; FREE
+            </p>
+            <Link
+              href={"/order?coupon=GG-50%off"}
+              className={`text-white  rounded-md text-[19px] text-center font-medium hidetext py-2 px-4 w-full`}
+              style={{
+                background:
+                  "transparent linear-gradient(91deg, #f9413e 0%, #f7514e 100%) 0% 0% no-repeat",
+              }}
+            >
+              Order Now
+            </Link>
+          </div>
+        </div>
+      </div>
+      {modal ? (
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none h-screen">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              <div className="py-4 my-5  flex overflow-auto">
+                <div className="bg-[#1a3e61] px-4 py-4 max-w-[300px] md:block hidden">
+                  <h4 className="text-center text-[#FFC410] text-[30px] font-semibold leading-tight tracking-tight">
+                    Get <span className="text-white text-6xl">50%</span> Off on
+                    your Order
+                  </h4>
+                  <div className="bg-[#FFC410] h-[1px] w-32 content-center flex justify-center max-w-32 mx-auto mt-3"></div>
+                  <div className="flex flex-col gap-5">
+                    <div className="flex items-center gap-2">
+                      <img
+                        height={121}
+                        width={320}
+                        src={"/gogrades.org_assests/moneyback-logo.png"}
+                        alt="LOGO"
+                        className="aspect-square h-[62px] w-[62px]"
+                      ></img>
+                      <div className="text-white">
+                        <h3 className="text-[18px] font-medium">
+                          100% Money Back
+                        </h3>
+                        <h4>30 days Return</h4>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img
+                        height={121}
+                        width={320}
+                        src={"/gogrades.org_assests/premiumlogo.png"}
+                        alt="LOGO"
+                        className="aspect-square h-[62px] w-[62px]"
+                      ></img>
+                      <div className="text-white">
+                        <h3 className="text-[18px] font-medium">
+                          Premium Level
+                        </h3>
+                        <h4>Top Writers & Checkers</h4>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img
+                        height={121}
+                        width={320}
+                        src={"/gogrades.org_assests/quality.png"}
+                        alt="LOGO"
+                        className="aspect-square h-[62px] w-[62px]"
+                      ></img>
+                      <div className="text-white">
+                        <h3 className="text-[18px] font-medium">
+                          100% Quality
+                        </h3>
+                        <h4>No Compromise on Quality</h4>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img
+                        height={121}
+                        width={320}
+                        src={"/gogrades.org_assests/satisfaction.png"}
+                        alt="LOGO"
+                        className="aspect-square h-[62px] w-[62px]"
+                      ></img>
+                      <div className="text-white">
+                        <h3 className="text-[18px] font-medium">
+                          100% Satisfaction
+                        </h3>
+                        <h4>Guaranteed Satisfaction</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CountryCode modalChange={modalChange} countryy={country} />
+                <h3
+                  className="text-[30px] text-white ml-4 cursor-pointer h-fit bg-red-500 px-4 py-1 rounded-full hidden md:block"
+                  onClick={() => setModal(false)}
+                >
+                  X
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-70 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+      <Footer number={number} />
+    </>
+  );
+}
