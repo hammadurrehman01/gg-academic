@@ -210,7 +210,11 @@ export default function Home() {
         <ReviewsTest />
         <HowItWorksTest title="Academic Consultancy" />
         {/* <TestimonialsTest /> */}
-        <FreeSampleTest locationDetails={locationDetails} country={country} title="Academic Consultancy" />
+        <FreeSampleTest
+          locationDetails={locationDetails}
+          country={country}
+          title="Academic Consultancy"
+        />
         <Footer number={number} title="Academic Consultancy" />
       </main>
     </div>
