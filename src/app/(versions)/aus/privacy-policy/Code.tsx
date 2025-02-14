@@ -104,7 +104,7 @@ export default function Code() {
             Get Free Price Quote
           </button>
           <Link
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           >
             <button className="bg-white py-1 px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2">
               <IoLogoWhatsapp className="text-[22px] text-green-600" />
@@ -136,7 +136,7 @@ export default function Code() {
             the purpose of explaining our privacy details, &nbsp;we&nbsp;
             &nbsp;our&nbsp; and &nbsp;us&nbsp; will be referred to as
             Gogrades.org which operates this platform and &nbsp;you&nbsp; will
-            imply to the user of our academic writing service throughout the
+            imply to the user of our Academic Assistance service throughout the
             policy.
             <br />
             Whether you are a regular client or new to our service, we recommend

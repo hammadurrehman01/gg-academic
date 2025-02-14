@@ -207,7 +207,7 @@ export default function EveryStudentTest(props: any) {
       }}
     >
       <h3 className="text-2xl text-center text-white font-semibold">
-        Reliable Academic Writing Team for
+        Reliable Academic Assistance Team for
         <span className="text-[#FFE066]"> Every Student</span>
       </h3>
       <p className="text-white text-center max-w-3xl mx-auto ">
@@ -228,7 +228,7 @@ export default function EveryStudentTest(props: any) {
           </button>
         </Link>
         <Link
-          href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+          href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           // href={`https://api.whatsapp.com/send?phone=${number}&text=Hello Gogrades!`}
           className="bg-white  py-[7px] px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2"
           target="_blank"

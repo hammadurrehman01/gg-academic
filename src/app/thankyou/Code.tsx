@@ -133,7 +133,7 @@ export default function Code() {
         <div className="flex gap-4 flex-col md:flex-row justify-center items-center w-fit">
           <Link
             target="_blank"
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
             className={`text-white  rounded-md text-[19px] font-medium  py-2 px-4 hover:scale-105 hover:shadow-xl transition ease-in duration-200 delay-200`}
             style={{
               background:

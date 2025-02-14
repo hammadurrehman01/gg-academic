@@ -249,7 +249,7 @@ export default function TrustedPartnerTest(props: any) {
           Activate Discount Coupon
         </button>
         <Link
-          href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+          href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           // href={`https://api.whatsapp.com/send?phone=${number}&text=Hello Gogrades!`}
           className="bg-white  py-[7px] px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2"
           target="_blank"

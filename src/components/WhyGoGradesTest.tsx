@@ -206,7 +206,7 @@ export default function WhyGoGradesTest(props: any) {
     //       - WHY GOGRADES.ORG
     //     </h4>
     //     <h5 className="text-white text-[20px] sm:text-[25px] md:text-[18px] font-medium leading-tight w-[356px]  mt-2">
-    //       Best Quality {title ? title : `Academic Writing Team`} For University &
+    //       Best Quality {title ? title : `Academic Assistance Team`} For University &
     //       College Students
     //     </h5>
     //     <div
@@ -214,7 +214,7 @@ export default function WhyGoGradesTest(props: any) {
     //     >
     //       <p className="text-[15px] text-white leading-tight w-[400px]">
     //         Searching for the No.1 Online
-    //         {title ? " " + title : ` Academic Writing Team`} in {city}? End your
+    //         {title ? " " + title : ` Academic Assistance Team`} in {city}? End your
     //         search with Gogrades.org.
     //       </p>
     //       <h6 className="font-medium pl-32 pt-4 text-white text-[18px]">FREE Features</h6>
@@ -246,7 +246,7 @@ export default function WhyGoGradesTest(props: any) {
     //       </div>
     //       <p className="text-[15px] text-white leading-tight">
     //         With more than 500 Ph.D. consultants, we are determined to provide
-    //         the best custom {title ? title : `Academic Writing Team`} service to the{" "}
+    //         the best custom {title ? title : `Academic Assistance Team`} service to the{" "}
     //         {city} students.
     //       </p>
     //     </div>
@@ -323,7 +323,7 @@ export default function WhyGoGradesTest(props: any) {
             </h3>
           </div>
           {/* <Link
-              href={`https://wa.me/123?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+              href={`https://wa.me/123?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
               // href={`https://api.whatsapp.com/send?phone=${number.number}&text=Hello Gogrades!`}
               style={{
                 background:

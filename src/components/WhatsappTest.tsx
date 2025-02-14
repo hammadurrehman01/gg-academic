@@ -197,7 +197,7 @@ export default function WhatsappTest(props: any) {
       </h3>
       <p className="text-white text-center max-w-3xl mx-auto ">
         Gogrades.org ensures to deliver the world-class
-        {title ? ` ${title}` : ` Academic Writing`} at prices that are best in
+        {title ? ` ${title}` : ` Academic Assistance`} at prices that are best in
         the market. Our team always responds to the demands of the students
         quickly and fulfills them in the best possible way.
       </p>
@@ -217,7 +217,7 @@ export default function WhatsappTest(props: any) {
           Get Free Quote
         </button>
         <Link
-          href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+          href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           // href={`https://api.whatsapp.com/send?phone=${number}&text=Hello Gogrades!`}
           className="bg-white  py-[7px] px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2"
           target="_blank"

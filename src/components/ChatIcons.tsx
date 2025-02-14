@@ -125,13 +125,13 @@ const FabButton = (numbers: any) => {
         >
           <Link
             target="_blank"
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           >
             <IoLogoWhatsapp className="text-[40px] shadow-md shadow-black z-[5555555555555555555] text-green-600 bg-white rounded-full p-[6px] m-1" />
           </Link>
           <Link
             target="_blank"
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
             className={`absolute z-[-100000] h-[34px] rounded-3xl text-left  ml-20 ${
               isOpenWhatsapp
                 ? "min-w-[150px] pl-8"
@@ -174,12 +174,12 @@ const FabButton = (numbers: any) => {
           }}
         >
           <Link
-            href={`sms:${number}?body=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`sms:${number}?body=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           >
             <BiSolidMessageAltDetail className="text-[40px] shadow-md shadow-black text-purple-600 bg-white rounded-full p-[6px] m-1" />
           </Link>
           <Link
-            href={`sms:${number}?body=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`sms:${number}?body=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
             className={`absolute z-[-100000] h-[34px] rounded-3xl text-left  ml-20 ${
               isOpenMessage
                 ? "min-w-[160px] pl-8"

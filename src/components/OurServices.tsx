@@ -458,7 +458,7 @@ export default function OurServices(number: any) {
         </div>
         <div className="flex items-center gap-2 flex-wrap max-sm:justify-center">
           <Link
-            href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
             // href={`https://api.whatsapp.com/send?phone=${number.number}&text=Hello Gogrades!`}
             style={{
               background:

@@ -157,7 +157,7 @@ export default function Navbar(number: any) {
           <div className="hidden gap-5 min-[830px]:flex">
             <Link
               // href={`https://api.whatsapp.com/send?phone=${number.number}&text=Hello Gogrades!`}
-              href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+              href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
               className="text-white text-[14px] flex items-center gap-2"
               target="_blank"
             >
@@ -165,7 +165,7 @@ export default function Navbar(number: any) {
               Customer Support
             </Link>
             <Link
-              href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+              href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
               className="text-white text-[14px] flex items-center gap-2"
               target="_blank"
             >

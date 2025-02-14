@@ -340,7 +340,7 @@ export default function HerosectionTest(props: any) {
 
   function getTitle(title: string) {
     if (!title) {
-      return "Best Academic Writing Team";
+      return "Best Academic Assistance Team";
     } else if (title.includes("Professional")) {
       return title;
     } else if (title.includes("can")) {

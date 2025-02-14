@@ -26,7 +26,7 @@ export default function HowItWorksTest(title: any) {
         </h3>
         <h4 className="text-[#071E57] text-base font-medium leading-tight  mt-2">
           Three Simple Steps to Avail
-          {title.title ? ` ${title.title}` : ` Academic Writing`}
+          {title.title ? ` ${title.title}` : ` Academic Assistance`}
         </h4>
         <p className="text-[#3E4657]  text-[13px] sm:text-[16px] mt-2">
           Ready to place an {title.title} order? You dont have to go through

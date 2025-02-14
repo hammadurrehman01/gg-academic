@@ -104,7 +104,7 @@ export default function Code() {
             Get Free Price Quote
           </button>
           <Link
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           >
             <button className="bg-white py-1 px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2">
               <IoLogoWhatsapp className="text-[22px] text-green-600" />
@@ -223,16 +223,16 @@ export default function Code() {
             guilty of doing plagiarism which can lead to serious consequences.
             Even if you rephrase the reference paper, it will still be counted
             as unoriginal. So, we strongly suggest you to comply with this Fair
-            Use Policy and use our academic writing services for intended
+            Use Policy and use our Academic Assistance services for intended
             purpose only.
           </p>
           <h3 className="text-[18px] leading-[24px] text-[#2a2a2a] text-left font-semibold my-6 ">
-            The Reasons Why You Should Take Academic Writing Assistance From Us
+            The Reasons Why You Should Take Academic Assistance From Us
           </h3>
           <p className="text-[15px] leading-[24px] text-[#2A2A2A] ">
             After knowing that submitting our work to your professor as your own
             can be threatening to your academic career, you may be thinking that
-            why should you take academic writing assistance from us then. So, we
+            why should you take Academic Assistance from us then. So, we
             want to let you know that our reference papers are the most powerful
             research tools that students can use to create their own academic
             papers. By taking our services, you will be able to do a concise

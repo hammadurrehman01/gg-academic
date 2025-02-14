@@ -41,7 +41,11 @@ export default function Home() {
     }
 
     // If modalData is "false" (or missing after 8 hours), show modal
-    if ((!modalData || modalData === "false") && externalModal && externalModal === "false") {
+    if (
+      (!modalData || modalData === "false") &&
+      externalModal &&
+      externalModal === "false"
+    ) {
       const timer = setTimeout(() => {
         setModal(true);
       }, 7000);

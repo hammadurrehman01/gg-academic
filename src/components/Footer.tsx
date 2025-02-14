@@ -312,7 +312,7 @@ export default function Footer({ number, title }: any) {
             </Link>
             <Link
               // href={`https://api.whatsapp.com/send?phone=${number.number}&text=Hello Gogrades!`}
-              href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+              href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
               className="text-white text-[18px] flex items-center gap-2"
               target="_blank"
             >

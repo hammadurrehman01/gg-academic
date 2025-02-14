@@ -107,7 +107,7 @@ export default function Code() {
             Get Free Price Quote
           </button>
           <Link
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
           >
             <button className="bg-white py-1 px-[24px] text-[20px] rounded-[4px] font-medium flex items-center gap-2">
               <IoLogoWhatsapp className="text-[22px] text-green-600" />

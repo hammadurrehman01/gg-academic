@@ -396,7 +396,7 @@ async function ReadJSONAndSendEmail(decodedOrderId: string, filePath: string) {
             You Can Contact Our Support Team 24/7.
           </p>
           <a
-            href="https://wa.me/+447593709971?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?"
+            href="https://wa.me/+447593709971?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?"
             style="
               display: inline-block;
               padding: 10px 20px;

@@ -7,7 +7,7 @@ import { FaCheck } from "react-icons/fa";
 import openTawkToChat from "./herosection/tawkto";
 export default function OurServicesTest(number: any) {
   // const [des, setisDes] = useState(
-  //   `Writing an assignment is the most tedious task when students try to balance their precious time between academic responsibilities and other daily chores. To share their burden Gogrades.org extends its helping hand. We are the No.1 Academic Writing Team provider having completed more than 1000,000+ assignments. The Academic Writing Team of our website make sure to draft a high quality paper following proper formatting and referencing style.`
+  //   `Writing an assignment is the most tedious task when students try to balance their precious time between academic responsibilities and other daily chores. To share their burden Gogrades.org extends its helping hand. We are the No.1 Academic Assistance Team provider having completed more than 1000,000+ assignments. The Academic Assistance Team of our website make sure to draft a high quality paper following proper formatting and referencing style.`
   // );
   const [img, setImg] = useState("/services/assignment.svg");
   const [active, setIsActive] = useState("Assignments");
@@ -23,7 +23,7 @@ export default function OurServicesTest(number: any) {
     {
       title: "Assignments",
       description:
-        "Writing an assignment is the most tedious task when students try to balance their precious time between academic responsibilities and other daily chores. To share their burden Gogrades.org extends its helping hand. We are the No.1 online assignment consultancy help service UK provider having completed more than 1000,000+ assignments. The Academic Writing Team of our website make sure to draft a high quality paper following proper formatting and referencing style.",
+        "Writing an assignment is the most tedious task when students try to balance their precious time between academic responsibilities and other daily chores. To share their burden Gogrades.org extends its helping hand. We are the No.1 online assignment consultancy help service UK provider having completed more than 1000,000+ assignments. The Academic Assistance Team of our website make sure to draft a high quality paper following proper formatting and referencing style.",
       image: "/services/assignment.svg",
       heading: `Exclusive Features`,
       features: [
@@ -70,7 +70,7 @@ export default function OurServicesTest(number: any) {
     {
       title: "Proofreading",
       description:
-        "Grammatical mistakes may let you lose your scores. It is important that the document you get after availing our assignment assistance are not just well researched and formatted but also have no errors. We have a dedicated team of 100+ proofreaders who ensure to check your document several times before delivering it to you. Our online Academic Writing  providers deliver flawless documents without compromising with the quality. So, if you want your documents to be error-free just avail proofreading and editing services by experts.",
+        "Grammatical mistakes may let you lose your scores. It is important that the document you get after availing our assignment assistance are not just well researched and formatted but also have no errors. We have a dedicated team of 100+ proofreaders who ensure to check your document several times before delivering it to you. Our online Academic Assistance  providers deliver flawless documents without compromising with the quality. So, if you want your documents to be error-free just avail proofreading and editing services by experts.",
 
       image: "/services/assigment3.svg",
       heading: `FREE Features`,
@@ -161,7 +161,7 @@ export default function OurServicesTest(number: any) {
 
     {
       title: "Homework",
-      description: `Our panel of Expert Tutors are available around the clock to offer online homework help and online Academic Writing Team. We are at your service whenever you need us, no questions asked. Our philosophy of being available around the clock comes from our understanding that learning should never stop and by offering 24/7 assistance, we are doing our bit to help you learn better and improve your grades. By bringing together subject matter experts from all across the globe, we ensure online homework help and assignment help through day and night.`,
+      description: `Our panel of Expert Tutors are available around the clock to offer online homework help and online Academic Assistance Team. We are at your service whenever you need us, no questions asked. Our philosophy of being available around the clock comes from our understanding that learning should never stop and by offering 24/7 assistance, we are doing our bit to help you learn better and improve your grades. By bringing together subject matter experts from all across the globe, we ensure online homework help and assignment help through day and night.`,
 
       image: "/services/assigment9.svg",
       heading: `FREE Features`,
@@ -459,7 +459,7 @@ export default function OurServicesTest(number: any) {
         </div>
         <div className="flex items-center gap-2 flex-wrap max-sm:justify-center mt-6 md:mt-0">
           <Link
-            href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number.number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
             // href={`https://api.whatsapp.com/send?phone=${number.number}&text=Hello Gogrades!`}
             style={{
               background:

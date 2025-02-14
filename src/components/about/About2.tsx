@@ -110,7 +110,7 @@ export default function About2({ region }: any) {
             Call Now
           </Link>
           <Link
-            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+            href={`https://wa.me/${number}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
             target="_blank"
             className="text-[23px] text-[#2A2A2A] font-semibold flex gap-2 items-center"
           >

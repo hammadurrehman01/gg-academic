@@ -280,7 +280,7 @@ export const metalist = [
     metatitle: "Best Academic Help Service | Gogrades.org",
     metadescription:
       "Academic Help Service for the students of UK, USA, UAE, NZ, Europe and Australia. We have qualified and experienced academic writers for all subjects.",
-    h1: " Best Academic Writing Team Karachi  All Subjects Are Accepted",
+    h1: " Best Academic Assistance Team Karachi  All Subjects Are Accepted",
   },
   {
     url: "write-my-dissertation",
@@ -1537,10 +1537,10 @@ export const metalist = [
   },
   {
     url: "academic-helpers",
-    metatitle: "Best Academic Writing Team | Gogrades.org",
+    metatitle: "Best Academic Assistance Team | Gogrades.org",
     metadescription:
       "Get online assessment editing services and help for the students of UK and Australia. We have qualified and experienced academic writers for all subjects.",
-    h1: "Academic Writing Team",
+    h1: "Academic Assistance Team",
   },
 ];
 

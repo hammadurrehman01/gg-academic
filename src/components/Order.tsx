@@ -924,7 +924,7 @@ export default function Order({ coupon }: any) {
             <FaCheck className="bg-[#33e533] text-[22px] rounded-full p-1 text-white mr-1" />
             24/7{" "}
             <Link
-              href={`https://wa.me/${numberr}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+              href={`https://wa.me/${numberr}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
               className="text-red-500"
             >
               WhatsApp

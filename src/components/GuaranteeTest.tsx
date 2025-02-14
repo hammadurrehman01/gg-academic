@@ -18,7 +18,7 @@ export default function GuaranteeTest(props: any) {
     {
       header: "100% Plagiarism FREE",
       details: `When you avail Asy and the research of your work. Also, the Ph.D. certified online  ${
-        title ? ` ${title}` : `Academic Writing`
+        title ? ` ${title}` : `Academic Assistance`
       } providers associated with us ensure they work on each document dedicatedly. Every scholar gets a document that is written from scratch to ensure it is original and unique. We understand that the documents go through rigorous scrutiny before evaluation in the universities. We take pride in assuring top grades to students by providing 100% original documents that are proofread and edited thoroughly.`,
       image: "/ss1.png",
     },
@@ -30,21 +30,21 @@ export default function GuaranteeTest(props: any) {
     {
       header: "100% Satisfaction",
       details: `We strive to deliver high-quality documents that lead to customer satisfaction. Our strict policies are designed to assure there are no compromises made with the quality of your documents. The expert  ${
-        title ? ` ${title}` : `Academic Writing`
+        title ? ` ${title}` : `Academic Assistance`
       } ${city} providers associated with us aim to deliver high quality and well-researched documents that ensure excellent grades to the students availing Help from us. If in any case, you face difficulties, you can always reach to our customer care executives to get your problems solved.`,
       image: "/ss4.png",
     },
     {
       header: "Unlimited Revisions",
       details: `When you reach to our  ${
-        title ? ` ${title}` : `Academic Writing`
+        title ? ` ${title}` : `Academic Assistance`
       } ${city} for your documents we deliver you comprehensive tasks. If in case you have any doubt in the tasks that are delivered to you, we offer unlimited revisions that too free of cost. We ensure to deliver the tasks before hand so that the scholars get enough time to research and review the complete work. With our free revisions you can always boast, “Gogrades.org is always there for me, even after delivery.”`,
       image: "/ss6.png",
     },
     {
       header: "Lowest Price",
       details: `With a transparent pricing structure, we ensure students do not feel cheated when they avail our online  ${
-        title ? ` ${title}` : `Academic Writing`
+        title ? ` ${title}` : `Academic Assistance`
       }. We make it a point that the help services that one avails do not add burden to the pocket. With regular discounts and several freebies, we have designed our services to ensure they fit your budget.`,
       image: "/sideline1.png",
     },

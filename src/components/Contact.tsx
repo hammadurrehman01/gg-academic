@@ -336,7 +336,7 @@ export default function Contact({ region }: any) {
             </Link>
             <Link
               className="text-[23px] text-[#2A2A2A] font-semibold flex gap-2 items-center leading-[8px]"
-              href={`https://wa.me/${phonenumber}?text=Hello GoGrades Team, I need academic writing assistance. Could you help me complete my task on time?`}
+              href={`https://wa.me/${phonenumber}?text=Hello GoGrades Team, I need Academic Assistance. Could you help me complete my task on time?`}
               target="_blank"
             >
               <IoLogoWhatsapp className="text-[30px] text-green-600" />
